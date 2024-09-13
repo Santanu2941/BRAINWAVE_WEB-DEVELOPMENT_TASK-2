@@ -1,0 +1,672 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 2px;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: black;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    background: white;
+    font-family: "Poppins", sans-serif;
+    
+}
+
+#logo{
+    font-size: 1.7rem;
+    color: black;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#logo span{
+    font-size: 1.4rem;
+}
+
+#nav-links{
+    display: flex;
+}
+
+#nav-links li{
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+#nav-links li a{
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    transition: 0.2s;
+}
+
+#nav-links li a:hover{
+    color: gray;
+    text-decoration: underline;
+}
+
+#navbar button{
+    font-size: 1.2rem;
+    padding: 5px 20px;
+    border-radius: 5px;
+    display: flex-end;
+    transition: 0.2s;
+}
+
+#navbar button:hover{
+    background-color: black;
+    color: white;
+}
+
+#navbar button i{
+    transition: 0.2s;
+}
+
+#navbar button:hover i{
+    transform: translateX(6px);
+}
+
+#menu-btn{
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+#menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.hidden{
+    opacity: 0;
+}
+
+#nav-links2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+}
+
+.main{
+    width: 100%;
+    height: 91vh;
+    background-image: url(./image/2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.item-deatils{
+    background: black;
+}
+
+.item-deatils h1{
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    font-family: "Poppins", sans-serif;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    margin: 0rem 8rem;
+    margin-bottom: 1.5rem;
+}
+
+.image-container{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.small-img{
+    width: 6rem;
+}
+
+.small-img img{
+    width: 100%;
+    padding: 0.3rem;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.small-img img:hover{
+    transition: 2s;
+    background-color: black
+}
+
+.big-img{
+    width: 24.8rem;
+}
+
+.big-img img{
+    max-width: 300px;
+}
+
+.big-img img:hover{
+    transform: scale(1.1);
+}
+
+.content h3{
+    font-size: 2.2rem;
+    margin: 1rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.stars i{
+    font-size: 1rem;
+    color: orange; 
+}
+
+.stars i:nth-child(1){
+    margin-left: 1rem;
+}
+
+.content p{
+    font-size: 1.3rem;
+    margin: 1rem;
+    opacity: 0.6;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.price{
+    font-size: 2rem;
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.price span i{ 
+    font-size: 1.3rem;
+    color: orange;
+    text-decoration: line-through;
+}
+
+.content a{
+    margin: 1rem;
+}
+
+.body{
+    width: 100%;
+    height: 60vh;
+    background-image: url(./image/body.png);
+    background-size: cover;
+    background-position: center;
+    margin-top: -1.5rem;
+}
+
+.products{
+    padding: 15px 0;
+    /* margin-top: -1.5rem; */
+    background-color: black;   
+}
+
+.products h1{
+    margin-bottom: 1rem;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.box{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1rem;
+}
+
+.card{
+    border-radius: 5px;
+    text-align: center;
+    background: #f6f6f6;
+    padding-block: 1.5rem;
+}
+
+.card .image img{
+    width: 180px;
+    margin: 8px 0;
+    transition: 0.3s;
+}
+
+.card:hover .image img{
+    transform: rotate(20deg);
+}
+
+.products_text h2{
+    font-size: 1.5rem;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.products_text h3{
+    margin: 7px 0;
+}
+
+.products_star{
+    color: orange;
+    margin-bottom: 19px;
+    cursor: pointer;
+}
+
+.newSeason {
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+}
+  
+.nsItem {
+    flex: 1;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.nsImg {
+    width: 100%;
+    height: auto;
+}
+  
+.nsTitlemMain{
+    font-size: 1.5rem;
+    margin: 0.6rem;
+}
+
+.nsTitle {
+    font-size: 2.5rem;
+    margin-top: 2.5rem;
+}
+  
+.nsButton {
+    font-size: 1rem;
+    margin-top: 2.5rem;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+.nsButton:hover{
+    background-color: black;
+    color: white;
+}
+
+.features {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    padding: 50px;
+    background-color: black;
+}
+  
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    border-top-left-radius: 3rem;
+    font-family: "Ubuntu", sans-serif;
+}
+  
+.featureIcon {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+}
+  
+.featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+}
+  
+.featureDesc {
+    color: gray;
+    width: 50%;
+    height: 100px;
+}
+
+.footer{
+    display: flex;
+    font-family: "Ubuntu", sans-serif;
+    background-color: white;
+}
+  
+.footerLeft{
+    flex: 2;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+    font-size: 1.2rem;
+}
+
+.footerMenu{
+    padding: 0.5rem;
+}
+
+.fMenuTitle{
+    font-size: 1.4rem;
+    margin-bottom: 13px;
+}
+  
+.fList {
+    padding: 0;
+    list-style: none;
+}
+  
+.fListItem {
+    margin-bottom: 10px;
+}
+
+.fListItem a{
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+
+.fListItem a:hover{
+    text-decoration: underline;
+    color: black;
+}
+  
+.footerRight {
+    flex: 1;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+  
+.fInput {
+    padding: 5px;
+}
+  
+.fButton {
+    padding: 5px 15px;
+    background-color: black;
+    color: white;
+}
+
+.fButton:hover{
+    transition: 0.4s;
+    background-color: gray;
+}
+  
+.fa-brands{
+    padding: 5px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: black;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+}
+
+.fIcons i:hover{
+    transition: 0.4s;
+    background-color: gray
+}
+  
+.copyright{
+    font-weight: 300;
+}
+
+.btn{
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.btn:hover{
+    transition: 0.2s;
+    background: none;
+    background: linear-gradient(to right, orange, grey);
+    color: white;
+}
+
+@media (max-width: 1000px) {
+    #logo{
+        font-size: 1.3rem;
+    }
+    #nav-links li a{
+        margin: 0;
+        font-size: 1.1rem;
+    }
+    #navbar button {
+        font-size: 1rem;
+    }
+
+    .main {
+        height: 70vh;
+    }
+    
+    .item-deatils h1, .products h1{
+        font-size: min(5vw, 36px);
+    }
+    .row {
+        flex-direction: column;
+    }
+    .image-container, .content {
+        text-align: center;
+    }
+    .big-img img {
+        max-width: 100%;
+    }
+    .content h3 {
+        font-size: min(6vw, 36px);
+    }
+    .content p {
+        font-size: min(3vw, 36px);
+    }
+    .content .price {
+        font-size: min(5vw, 36px);
+    }
+    .content .price span i {
+        font-size: min(3vw, 36px);
+    }
+
+    .body {
+        height: 40vh;
+    }
+
+    .products_text h2 {
+        font-size: min(6vw, 25px);
+    }
+
+    .nsTitlemMain {
+        font-size: min(2vw, 36px);
+    }
+    .nsTitle {
+        font-size: min(4vw, 36px);
+    }
+
+    .features {
+        flex-wrap: wrap;
+    }
+    .feature {
+        margin-bottom: 20px;
+    }
+
+    .footer{
+        flex-wrap: wrap;
+    }
+    .fMenuTitle {
+        font-size: 1.1rem;
+    }
+    .footerLeft{
+        padding: 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px){
+    #nav-links{
+        display: none;
+    }
+    #nav-links2 li {
+        margin: 10px 0;
+    }
+    #nav-links2 li a {
+        text-decoration: none;
+        color: white;
+    }
+    
+    #menu-btn {
+        display: block;
+    }
+
+    .main {
+        height: 50vh;
+    }
+
+    .row {
+        margin: 0rem 3rem;
+        margin-bottom: 1.5rem;
+    }
+    .image-container{
+        display: flex;
+        flex-direction: column;
+        align-items: normal;
+        gap: 1.5rem;
+    }
+    .small-img{
+        display: flex;
+    }
+
+    .body {
+        height: 25vh;
+    }
+
+    .nsTitle {
+        margin-top: 1.5rem;
+    }
+    .nsButton {
+        font-size: min(2vw, 36px);
+        padding: 10px;
+    }    
+}
+
+@media (max-width: 480px) {
+    #logo {
+        font-size: 1rem;
+    }
+    #logo span {
+        font-size: 1rem;
+    }
+    #navbar button {
+        font-size: 0.7rem;
+        padding: 5px 10px;
+    }
+
+    .main {
+        height: 30vh;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .row {
+        margin: 0rem 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    .small-img{
+        margin-left: 55px;
+    }
+    .small-img img{
+        width: 70px;
+        height: 70px;
+    }
+    .big-img img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .body {
+        height: 15vh;
+    }
+
+    .nsButton {
+        margin-top: 1rem;
+    }
+    
+    .features {
+        padding: 10px;
+    }
+    .feature{
+        width: 180px;
+        height: 180px;
+    }
+    .featureIcon {
+        width: 40px;
+        height: 40px;
+    }
+    .featureTitle {
+        font-size: 16px;
+    }
+    .featureDesc {
+        font-size: 12px;
+    }
+    .footerRight {
+        padding-block-start: initial;
+        padding: 20px;
+    }
+}
